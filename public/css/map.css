@@ -1,0 +1,26 @@
+#map-container {
+    position: fixed; /* Changed to fixed to allow movement across the entire viewport */
+    width: 25%; /* Width of the map container */
+    height: 50%; /* Height of the map container */
+    cursor: move; /* Cursor indicates it can be moved */
+    z-index: 1000; /* Ensure it's above other content */
+  }
+  
+  #map-header {
+    padding: 4px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    cursor: grab; /* Change to 'grab' for a better visual cue */
+  }
+  
+  #map {
+    width: 100%; /* Fills the width of the map-container */
+    height: calc(100% - 4px); /* Adjusts the height to account for the header */
+  }
+  
+  .draggable {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid black;
+    box-sizing: border-box;
+  }

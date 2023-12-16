@@ -1,0 +1,67 @@
+@extends('layouts.frontend')
+@section('content')
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+
+            <div class="card">
+                <div class="card-header">
+                    {{ trans('global.show') }} {{ trans('cruds.note.title') }}
+                </div>
+
+                <div class="card-body">
+                    <div class="form-group">
+                        <div class="form-group">
+                            <a class="btn btn-default" href="{{ route('frontend.notes.index') }}">
+                                {{ trans('global.back_to_list') }}
+                            </a>
+                        </div>
+                        <table class="table table-bordered table-striped">
+                            <tbody>
+                                <tr>
+                                    <th>
+                                        {{ trans('cruds.note.fields.id') }}
+                                    </th>
+                                    <td>
+                                        {{ $note->id }}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        {{ trans('cruds.note.fields.user') }}
+                                    </th>
+                                    <td>
+                                        {{ $note->user->name ?? '' }}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        {{ trans('cruds.note.fields.node') }}
+                                    </th>
+                                    <td>
+                                        {{ $note->node }}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        {{ trans('cruds.note.fields.note') }}
+                                    </th>
+                                    <td>
+                                        {{ $note->note }}
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="form-group">
+                            <a class="btn btn-default" href="{{ route('frontend.notes.index') }}">
+                                {{ trans('global.back_to_list') }}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+@endsection
